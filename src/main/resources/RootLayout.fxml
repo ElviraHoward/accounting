@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="accounting.controller.RootLayoutController">
+  <top>
+    <MenuBar BorderPane.alignment="CENTER">
+      <menus>
+        <Menu mnemonicParsing="false" text=" Счёт">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleBill" text="Детальный список счетов"/>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Категории">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleIncome" text="Доходы"/>
+          </items>
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleExpense" text="Расходы"/>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Операции">
+          <items>
+          <MenuItem mnemonicParsing="false" text="Приход"/>
+        </items>
+          <items>
+            <MenuItem mnemonicParsing="false" text="Расход"/>
+          </items>
+          <items>
+            <MenuItem mnemonicParsing="false" text="Перевод"/>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Инструменты">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Статистика счетов" />
+          </items>
+          <items>
+            <MenuItem mnemonicParsing="false" text="О программе"/>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>

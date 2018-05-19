@@ -18,7 +18,7 @@ public class Bill {
     public Bill(String name, String description) {
         this.name = new SimpleStringProperty(name);
         this.description = new SimpleStringProperty(description);
-        this.balance = new SimpleIntegerProperty(12);
+        this.balance = new SimpleIntegerProperty(0);
     }
 
     public String getName() {

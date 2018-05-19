@@ -5,29 +5,28 @@ import javafx.beans.property.*;
 import java.time.LocalDate;
 
 public class Operation {
-    private final StringProperty outputBill;
+
     private final StringProperty inputBill;
-    private final StringProperty category;
-    private final IntegerProperty value;
-    private final StringProperty type;
+    private final StringProperty outputBill;
     private final StringProperty description;
     private final ObjectProperty<LocalDate> dateOperation;
+    private final StringProperty type;
+    private final StringProperty category;
+    private final IntegerProperty value;
 
     public Operation() {
         this(null, null);
     }
 
-    public Operation(String outputBill, String inputBill) {
-        this.outputBill = new SimpleStringProperty(outputBill);
+    public Operation(String inputBill, String outputBill) {
         this.inputBill = new SimpleStringProperty(inputBill);
+        this.outputBill = new SimpleStringProperty(outputBill);
 
-        // Some initial dummy data, just for convenient testing.
-        this.category = new SimpleStringProperty("some category");
-        this.value = new SimpleIntegerProperty(1234);
-        this.type = new SimpleStringProperty("some type");
-        this.description = new SimpleStringProperty("some description");
-        this.dateOperation = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
-    }
+        this.description = new SimpleStringProperty("Описание");
+        this.dateOperation = new SimpleObjectProperty<LocalDate>(LocalDate.of(2018, 5, 26));
+        this.category = new SimpleStringProperty("Доход");
+        this.value = new SimpleIntegerProperty(0);
+        this.type = new SimpleStringProperty("Приход");}
 
     public String getOutputBill() {
         return outputBill.get();

@@ -17,7 +17,7 @@
         <Label text="Описание: " GridPane.rowIndex="2" />
         <TextField fx:id="descriptionColumn" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
         <Label text="Дата операции: " GridPane.rowIndex="3" />
-        <TextField fx:id="dateColumn" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <DatePicker fx:id="dateColumn" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         <Label text="Тип операции: " GridPane.rowIndex="4" />
         <ComboBox fx:id="typeColumn" GridPane.columnIndex="1" GridPane.rowIndex="4" />
         <Label text="Сумма: " GridPane.rowIndex="5" />

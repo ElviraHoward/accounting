@@ -292,6 +292,19 @@ public class MainApp extends Application{
         }
     }
 
+    public void showInfo() {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("/AboutProgram.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            rootLayout.setCenter(page);
+            AboutProgramController controller = loader.getController();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Stage getPrimaryStage() {
         return primaryStage;
     }

@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -23,7 +24,7 @@ public class OperationEditController {
     @FXML
     private TextField descriptionColumn;
     @FXML
-    private TextField dateColumn;
+    private DatePicker dateColumn;
     @FXML
     private ComboBox typeColumn;
     @FXML
@@ -65,7 +66,7 @@ public class OperationEditController {
         inputBillColumn.setText(operation.getInputBill());
         outputBillColumn.setText(operation.getOutputBill());
         descriptionColumn.setText(operation.getDescription());
-        dateColumn.setText(String.valueOf(operation.getDateOperation()));
+        dateColumn.setValue(operation.getDateOperation());
         typeColumn.setValue(operation.getType());
         categoryColumn.setValue(operation.getCategory());
         valueColumn.setText(String.valueOf(operation.getValue()));
@@ -81,7 +82,7 @@ public class OperationEditController {
             operation.setInputBill(inputBillColumn.getText());
             operation.setOutputBill(outputBillColumn.getText());
             operation.setDescription(descriptionColumn.getText());
-            operation.setDateOperation(LocalDate.parse(dateColumn.getText()));
+            operation.setDateOperation(dateColumn.getValue());
             operation.setType(typeColumn.getSelectionModel().getSelectedItem().toString());
             operation.setCategory(categoryColumn.getSelectionModel().getSelectedItem().toString());
             operation.setValue(Integer.parseInt(valueColumn.getText()));
@@ -107,11 +108,11 @@ public class OperationEditController {
         if (descriptionColumn.getText() == null || descriptionColumn.getText().length() == 0) {
             errorMessage += "Ошибка ввода описания!\n";
         }
-        if (dateColumn.getText() == null || dateColumn.getText().length() == 0) {
+        if (dateColumn.getValue() == null || dateColumn.getValue().getDayOfMonth() == 0) {
             errorMessage += "Неверная дата!\n";
         } else {
             try {
-                LocalDate.parse(dateColumn.getText());
+                dateColumn.getValue();
             } catch (NumberFormatException e) {
                 errorMessage += "Неверная дата(введите число)!\n";
             }

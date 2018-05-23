@@ -39,7 +39,8 @@ public class Step3Controller {
         categoryField.setItems(categories);
         categoryField.setValue("Доходы");
         categoryField.valueProperty().bindBidirectional(operation.categoryProperty());
-        dateField.valueProperty().bind(operation.dateOperationProperty());
+        dateField.valueProperty().bindBidirectional(operation.dateOperationProperty());
+        dateField.setValue(LocalDate.now());
     }
 
     @Validate

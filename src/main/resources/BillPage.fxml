@@ -48,10 +48,10 @@
                         <GridPane prefHeight="89.0" prefWidth="372.0" AnchorPane.leftAnchor="5.0"
                                   AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="84.0">
                             <children>
-                                <Label text="Счёт"/>
+                                <Label text="Счёт:"/>
                                 <Label fx:id="nameLabel" text=" " GridPane.columnIndex="1"/>
-                                <Label text="Описание" GridPane.rowIndex="1"/>
-                                <Label text="Баланс" GridPane.rowIndex="2"/>
+                                <Label text="Описание:" GridPane.rowIndex="1"/>
+                                <Label text="Баланс:" GridPane.rowIndex="2"/>
                                 <Label fx:id="descriptionLabel" text=" " GridPane.columnIndex="1"
                                        GridPane.rowIndex="1"/>
                                 <Label fx:id="balanceLabel" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2"/>

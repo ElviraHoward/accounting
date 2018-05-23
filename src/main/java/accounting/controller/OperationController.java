@@ -57,7 +57,7 @@ public class OperationController {
             valueLabel.setText(String.valueOf(operation.getValue()));
             typeLabel.setText(operation.getType());
             descLabel.setText(operation.getDescription());
-            dateLabel.setText(DateUtil.format(operation.getDateOperation()));
+            dateLabel.setText(operation.getDateOperation().toString());
         } else {
             inputLabel.setText("");
             outputLabel.setText("");
@@ -88,10 +88,7 @@ public class OperationController {
     @FXML
     private void handleNewOperation() {
         Operation tempOperation = new Operation();
-        boolean okClicked = mainApp.showOperationAddDialogWizard(tempOperation);
-        if (okClicked) {
-            mainApp.getOperationData().add(tempOperation);
-        }
+        mainApp.showOperationAddDialogWizard(tempOperation);
     }
 
     @FXML

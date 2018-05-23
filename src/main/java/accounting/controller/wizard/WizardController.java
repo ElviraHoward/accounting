@@ -94,8 +94,9 @@ public class WizardController {
     public boolean isOkClicked() {
         return okClicked;
     }
+
     private void setInitialContent() {
-        currentStep.set( 0 );  // first element
+        currentStep.set( 0 );
         contentPanel.getChildren().add( steps.get( currentStep.get() ));
     }
 
@@ -132,7 +133,6 @@ public class WizardController {
 
     @FXML
     public void next() {
-
         Parent p = steps.get(currentStep.get());
         Object controller = p.getProperties().get(CONTROLLER_KEY);
 
@@ -176,7 +176,6 @@ public class WizardController {
 
     @FXML
     public void back() {
-
         if( currentStep.get() > 0 ) {
             contentPanel.getChildren().remove( steps.get(currentStep.get()) );
             currentStep.set( currentStep.get() - 1 );
@@ -186,9 +185,8 @@ public class WizardController {
 
     @FXML
     public void cancel() {
-
         contentPanel.getChildren().remove( steps.get(currentStep.get()) );
-        currentStep.set( 0 );  // first screen
+        currentStep.set(0);  // first screen
         contentPanel.getChildren().add( steps.get(currentStep.get()) );
     }
 

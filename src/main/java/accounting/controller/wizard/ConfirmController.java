@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
+
 /**
  * Created by Elvira on 17.05.2018.
  */
@@ -36,16 +38,12 @@ public class ConfirmController {
     public void submit() throws Exception {
         operation.setOutputBill(inputField.getText());
         operation.setInputBill(outputField.getText());
-        operation.setDateOperation(DateUtil.parse(dateField.getText()));
+        operation.setDateOperation(LocalDate.parse(dateField.getText()));
         operation.setType(typeField.getText());
         operation.setCategory(categoryField.getText());
         operation.setValue(Integer.parseInt(valueField.getText()));
         operation.setDescription(descField.getText());
-        if( log.isDebugEnabled() ) {
-            log.debug("[SUBMIT] saving fields 1-7 to the database via a web service call (not really)");
-        }
     }
-
 
     @Finish
     public Operation getOperation() {

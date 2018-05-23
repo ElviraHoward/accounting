@@ -44,7 +44,6 @@ public class StatisticController {
 
         for (int i = 0; i < monthCounter.length; i++) {
             series.getData().add(new XYChart.Data<>(monthNames.get(i), monthCounter[i]));
-            barChart.setStyle("-fx-fill: blue");
         }
         barChart.getData().add(series);
     }

@@ -30,4 +30,9 @@ public class RootLayoutController {
     private void handleStatistics() {
         mainApp.showStatistics();
     }
+
+    @FXML
+    private void handleInfo() {
+        mainApp.showInfo();
+    }
 }

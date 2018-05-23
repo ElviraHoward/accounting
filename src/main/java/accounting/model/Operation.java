@@ -21,7 +21,6 @@ public class Operation {
     public Operation(String inputBill, String outputBill) {
         this.inputBill = new SimpleStringProperty(inputBill);
         this.outputBill = new SimpleStringProperty(outputBill);
-
         this.description = new SimpleStringProperty("Описание");
         this.dateOperation = new SimpleObjectProperty<LocalDate>(LocalDate.of(2018, 5, 26));
         this.category = new SimpleStringProperty("Доход");

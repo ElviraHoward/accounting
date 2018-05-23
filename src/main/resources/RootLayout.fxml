@@ -28,7 +28,7 @@
             <MenuItem mnemonicParsing="false" onAction="#handleStatistics" text="Статистика операций" />
           </items>
           <items>
-            <MenuItem mnemonicParsing="false" text="О программе"/>
+            <MenuItem mnemonicParsing="false" text="О программе" onAction="#handleInfo"/>
           </items>
         </Menu>
       </menus>
